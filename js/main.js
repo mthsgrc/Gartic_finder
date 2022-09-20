@@ -1,13 +1,4 @@
-const threeLetterBtn = document.querySelector(".btn-3");
-const printedWordList = document.querySelector(".printedWordList");
-
-
-threeLetterBtn.addEventListener("click", function() {
-wordList3Letters = wordList.filter(word => word.length == 3)
-});
-
-
-let wordList = [
+let arrayWordList = [
 "anu", "asa", "aro", "avó", "bar", "baú", "boá", "boi", "céu", "chá",
 "cru", "dia", "dvd", "ema", "emu", "fax", "fio", "giz", "gnu", "gps",
 "ímã", "ler", "lua", "mãe", "mão", "mar", "mel", "oca", "ovo", "pai",
@@ -108,19 +99,34 @@ let wordList = [
 "xexéu", "zebra", "zíper", "zumbi"
 ];
 
-// wordLength = prompt("how many letter?", "1, 2, 3...").toFixed
-let wordLength = 4;
-let consultLetter = new Array(wordLength);
-// threeLetterBtn.onclick = window.alert("Hello");
-printedWordList.innerHTML = printWord();
+const threeLetterBtn = document.querySelector(".btn-3");
 
-function printWord() {
-	let text = "";
-	for (let i = 0; i < wordList.length; i++) {
-	 	text += " - " + wordList[i] + " ";
-	 } 
-	 text += ""
+	threeLetterBtn.addEventListener("click", function(){
+		wordLengthFilter(arrayWordList, 3)
+		printWord(arrayWordList);
+	});
 
-	 return text;
+
+
+function wordLengthFilter(words, i) {
+	filteredWords = words.filter(word => word.length == i);
+	arrayWordList = filteredWords
 }
 
+
+function printWord(words) {
+	const printedWordListDiv = document.querySelector(".printedWordList");
+	let text = "";
+	for (let i = 0; i < words.length; i++) {
+		text += " - " + words[i] + " ";
+	}
+	text += ""
+
+	printedWordListDiv.innerHTML = text;
+}
+
+printWord(arrayWordList);	
+
+
+let wordLength = 5;
+let consultLetter = new Array(wordLength);
