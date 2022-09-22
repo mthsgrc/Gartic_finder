@@ -265,3 +265,14 @@ main {
   width: 750px;
   margin: 0 auto;
 }
+
+button {
+
+  padding: 10px;
+  width: 45px;
+}
+
+.printedWordList {
+  font-family: monospace, sans-serif;
+  text-align: justify;
+}
