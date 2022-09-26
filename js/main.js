@@ -12,44 +12,60 @@ const thirtLetterBtn = document.querySelector(".btn-13");
 const fourtLetterBtn = document.querySelector(".btn-14");
 const fivetLetterBtn = document.querySelector(".btn-15");
 const alltLetterBtn = document.querySelector(".btn-all");
-
+const inputWord = document.querySelector(".input-field");
 const wrapper = document.getElementById("wrapper");
 
 alltLetterBtn.addEventListener("click", (event) => {
-	const isAllBtn = event.target.value === "all";
-	if(!isAllBtn) {
-		return;
-	}
-	printWords(arrayWordList);
+  const isAllBtn = event.target.value === "all";
+  if (!isAllBtn) {
+    return;
+  }
+  printWords(arrayWordList);
 })
 
 wrapper.addEventListener("click", (event) => {
-	const isButton = event.target.nodeName === "BUTTON";
-	if(!isButton) {
-		return;
-	}
-	if (event.target.value == "all") {return}
-	let wordLengthValue = parseInt(event.target.value, 10);
-	let nLettersWords = wordLengthFilter(arrayWordList, wordLengthValue);
-	printWords(nLettersWords);
+  const isButton = event.target.nodeName === "BUTTON";
+  if (!isButton) {
+    return;
+  }
+  if (event.target.value == "all") { return }
+  let wordLengthValue = parseInt(event.target.value, 10);
+  let nLettersWords = wordLengthFilter(arrayWordList, wordLengthValue);
+  printWords(nLettersWords);
 })
 
 function wordLengthFilter(words, i) {
-    filteredWords = words.filter(word => word.replace(/ /g,"").length == i);
-    return filteredWords;
+  let filteredWords = words.filter(word => word.replace(/ /g, "").length == i);
+  return filteredWords;
 }
 
 function printWords(words) {
-    const printedWordListDiv = document.querySelector(".printedWordList");
-    let text = "";
-    for (let i = 0; i < words.length; i++) {
-    		i == 0 ? text += words[i] + " " : text += " - " + words[i] + " ";
+  const printedWordListDiv = document.querySelector(".printedWordList");
+  let text = "";
+  for (let i = 0; i < words.length; i++) {
+    i == 0 ? text += words[i] + " " : text += " - " + words[i] + " ";
+  }
+  text += ""
+  printedWordListDiv.innerHTML = text;
+}
+
+function getWord(word = inputWord.value) {
+  let tmpWordsArray = wordLengthFilter(arrayWordList, word.length);
+  let guessedWord = word.split("");
+
+
+  let possibleWords = [];
+
+  tmpWordsArray.filter(function(w) {
+    let splitWord = w.split("");
+    testWord: for (let i = 0; i < splitWord.length; i++) {
+      if (w[i] == guessedWord[i]) {
+        possibleWords.push(w);
+        break testWord;
+      }
     }
-    text += ""
-    printedWordListDiv.innerHTML = text;
+  });
+  printWords(possibleWords);
 }
 
 printWords(arrayWordList);
-
-
-
