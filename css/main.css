@@ -266,7 +266,7 @@ main {
   margin: 0 auto;
 }
 
-button {
+.filter-btn {
 
   padding: 10px;
   width: 45px;
