@@ -26,13 +26,14 @@ alltLetterBtn.addEventListener("click", (event) => {
 
 wrapper.addEventListener("click", (event) => {
   const isButton = event.target.nodeName === "BUTTON";
-  if (!isButton) {
+  if (!isButton) { return; }
+  if (event.target.value == "25") {
+    printWords(arrayWordList);
     return;
   }
-  if (event.target.value == "all") { return }
   wordLengthValue = parseInt(event.target.value, 10);
   let nLettersWords = wordLengthFilter(arrayWordList, wordLengthValue);
-  printWords(nLettersWords);
+  inputWord.value == "" ? printWords(nLettersWords) : getWord(inputWord.value);
 })
 
 function wordLengthFilter(words, i) {
@@ -57,7 +58,7 @@ function getWord(word = inputWord.value) {
   let possibleWords = [];
 
   tmpWordsArray.filter((w) => {
-  	if (w[0] === guessedWord[0]) possibleWords.push(w);
+    if (w[0] === guessedWord[0]) possibleWords.push(w);
   });
 
   printWords(possibleWords);
@@ -67,12 +68,12 @@ printWords(arrayWordList);
 
 
 
-  // tmpWordsArray.filter(function(w) {
-  //   let splitWord = w.split("");
-  //   testWord: for (let i = 0; i < splitWord.length; i++) {
-  //     if (w[i] == guessedWord[i]) {
-  //       possibleWords.push(w);
-  //       break testWord;
-  //     }
-  //   }
-  // });
+// tmpWordsArray.filter(function(w) {
+//   let splitWord = w.split("");
+//   testWord: for (let i = 0; i < splitWord.length; i++) {
+//     if (w[i] == guessedWord[i]) {
+//       possibleWords.push(w);
+//       break testWord;
+//     }
+//   }
+// });
