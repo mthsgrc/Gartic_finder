@@ -1,19 +1,5 @@
 "use strict";
 
-// const threeLetterBtn = document.querySelector(".btn-3");
-// const fourLetterBtn = document.querySelector(".btn-4");
-// const fiveLetterBtn = document.querySelector(".btn-5");
-// const sixLetterBtn = document.querySelector(".btn-6");
-// const sevenLetterBtn = document.querySelector(".btn-7");
-// const eightLetterBtn = document.querySelector(".btn-8");
-// const nineLetterBtn = document.querySelector(".btn-9");
-// const tenLetterBtn = document.querySelector(".btn-10");
-// const elevenLetterBtn = document.querySelector(".btn-11");
-// const twelveLetterBtn = document.querySelector(".btn-12");
-// const thirtLetterBtn = document.querySelector(".btn-13");
-// const fourtLetterBtn = document.querySelector(".btn-14");
-// const fivetLetterBtn = document.querySelector(".btn-15");
-
 const nLetterBtn = document.querySelector(".filter-btn");
 const alltLetterBtn = document.querySelector(".btn-all");
 const inputWord = document.querySelector(".input-field");
@@ -72,15 +58,3 @@ function getWord(word = inputWord.value) {
 }
 
 printWords(arrayWordList);
-
-
-
-// tmpWordsArray.filter(function(w) {
-//   let splitWord = w.split("");
-//   testWord: for (let i = 0; i < splitWord.length; i++) {
-//     if (w[i] == guessedWord[i]) {
-//       possibleWords.push(w);
-//       break testWord;
-//     }
-//   }
-// });
