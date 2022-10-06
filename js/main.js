@@ -1,10 +1,17 @@
 "use strict";
 
+printWords(arrayWordList);
+
 // const nLetterBtn = document.querySelector(".filter-btn");
 // const alltLetterBtn = document.querySelector(".btn-all");
 const inputWord = document.querySelector(".input-field");
 const wrapper = document.getElementById("wrapper");
 let wordLengthValue = 0;
+
+wordCopyListener();
+// wordOfList.addEventListener("click", () => {
+// 	copy(event.target.value);
+// });
 
 
 inputWord.addEventListener("keyup", () => {
@@ -20,16 +27,20 @@ wrapper.addEventListener("click", () => {
 
 	if (event.target.value == "all") {
 		printWords(arrayWordList);
+		wordCopyListener();
 		return;
 	}
 	wordLengthValue = parseInt(event.target.value, 10);
 	let nLettersWords = wordLengthFilter(arrayWordList, wordLengthValue);
 	if (inputWord.value === "") {
 		printWords(nLettersWords);
+		wordCopyListener();
 	} else {
 		getWord();
 	}
 });
+
+
 
 function wordLengthFilter(words, i) {
 	let filteredWords = words.filter(word => word.replace(/ /g, "").length == i);
@@ -50,6 +61,7 @@ function getWord(word = inputWord.value) {
 	});
 
 	printWords(possibleWords);
+	wordCopyListener();
 }
 
 function printWords(words) {
@@ -64,6 +76,18 @@ function printWords(words) {
 	}
 	text += "";
 	printedWordListDiv.innerHTML = text;
+
 }
 
-printWords(arrayWordList);
+function wordCopyListener() {
+	let wordOfList = document.querySelectorAll(".word-of-list");
+	wordOfList.forEach((word) => {
+		word.addEventListener("click", () => copy(word.textContent));
+	});
+}
+
+async function copy(text) {
+	text = await navigator.clipboard.writeText(text);
+}
+
+wordCopyListener();
