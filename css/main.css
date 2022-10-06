@@ -284,6 +284,13 @@ main {
   text-align: justify;
 }
 
+.input-field {
+  font-family: monospace;
+  font-size: x-large;
+  font-weight: bold;
+  height: 50px;
+}
+
 #wrapper {
   width: 100%;
   margin: 0 auto;
