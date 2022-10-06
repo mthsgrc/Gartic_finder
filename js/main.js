@@ -6,6 +6,12 @@ const inputWord = document.querySelector(".input-field");
 const wrapper = document.getElementById("wrapper");
 let wordLengthValue = 0;
 
+
+inputWord.addEventListener("keyup", () => {
+	wordLengthValue = inputWord.value.length;
+	getWord()
+})
+
 wrapper.addEventListener("click", () => {
 	const isButton = event.target.nodeName === "BUTTON";
 	if (!isButton) {
@@ -21,7 +27,7 @@ wrapper.addEventListener("click", () => {
 	if (inputWord.value === "") {
 		printWords(nLettersWords);
 	} else {
-		getWord(inputWord.value);
+		getWord();
 	}
 });
 
