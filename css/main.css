@@ -180,9 +180,9 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -193,6 +193,7 @@ textarea {
    ========================================================================== */
 
 @media print {
+
   *,
   *::before,
   *::after {
@@ -209,11 +210,11 @@ textarea {
   }
 
   a[href]::after {
-    content: " (" attr(href) ")";
+    content: " ("attr(href) ")";
   }
 
   abbr[title]::after {
-    content: " (" attr(title) ")";
+    content: " ("attr(title) ")";
   }
 
   /*
@@ -262,17 +263,30 @@ textarea {
 }
 
 main {
-  width: 750px;
+  background-color: rgba(0, 25, 200, 0.3);
   margin: 0 auto;
+  padding: 50px 50px;
+  width: 1000px;
 }
 
 .filter-btn {
-
+  font-family: monospace;
+  font-size: x-large;
+  font-weight: bolder;
   padding: 10px;
   width: 45px;
 }
 
 .printedWordList {
   font-family: monospace, sans-serif;
+  font-size: 1.10em;
+  font-weight: bold;
   text-align: justify;
+}
+
+#wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 10px;
+
 }

@@ -1,3 +1,6 @@
+"use strict";
+
+
 function include(file) {
   
   var script  = document.createElement('script');

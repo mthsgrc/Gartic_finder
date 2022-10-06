@@ -1,7 +1,7 @@
 "use strict";
 
-const nLetterBtn = document.querySelector(".filter-btn");
-const alltLetterBtn = document.querySelector(".btn-all");
+// const nLetterBtn = document.querySelector(".filter-btn");
+// const alltLetterBtn = document.querySelector(".btn-all");
 const inputWord = document.querySelector(".input-field");
 const wrapper = document.getElementById("wrapper");
 let wordLengthValue = 0;
@@ -51,9 +51,9 @@ function printWords(words) {
 	let text = "";
 	for (let i = 0; i < words.length; i++) {
 		if (i === 0) {
-			text += words[i] + " ";
+			text += `<span class="word-of-list">${words[i]}</span>`;
 		} else {
-			text += " - " + words[i] + " ";
+			text += ` - <span class="word-of-list">${words[i]}</span>`;
 		}
 	}
 	text += "";
