@@ -76,7 +76,11 @@ function printWords(words) {
 	}
 	text += "";
 	printedWordListDiv.innerHTML = text;
+}
 
+function clearInput(){
+	inputWord.innerHTML = "";
+	
 }
 
 function wordCopyListener() {
