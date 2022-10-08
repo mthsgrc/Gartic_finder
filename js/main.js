@@ -1,5 +1,6 @@
 "use strict";
 
+let arrayWordList = geralWordList;
 printWords(arrayWordList);
 
 // const nLetterBtn = document.querySelector(".filter-btn");

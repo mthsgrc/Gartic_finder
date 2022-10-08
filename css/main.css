@@ -276,12 +276,24 @@ main {
   padding: 10px;
 }
 
+.theme-btns {
+  float: right;
+  margin-top: -96px;
+}
+
+.theme-btns button {
+  font-family: monospace;
+  padding: 7px;
+  font-weight: bold;
+  width: 90px;
+}
+
 .filter-btn{
   font-family: monospace;
   font-size: x-large;
   font-weight: bolder;
   padding: 10px;
-  width: 45px;
+  width: 50px;
 }
 
 .printedWordList {

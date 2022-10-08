@@ -1,8 +1,8 @@
 "use strict";
 
-let arrayWordList = [
-    "dj", "cd", "fã", 
-    "pá", "pé", "rã", 
+let geralWordList = [
+    "dj", "cd", "fã",
+    "pá", "pé", "rã",
 
     "anu", "asa", "aro", "avó", "bar", "baú", "boá", "boi", "céu", "chá",
     "cru", "dia", "dvd", "ema", "emu", "fax", "fio", "giz", "gnu", "gps",
