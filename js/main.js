@@ -79,8 +79,9 @@ function printWords(words) {
 }
 
 function clearInput(){
-	inputWord.innerHTML = "";
-	
+	inputWord.value = "";
+	inputWord.focus();
+	printWords(arrayWordList);
 }
 
 function wordCopyListener() {
