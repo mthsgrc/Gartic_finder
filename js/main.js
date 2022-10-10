@@ -7,6 +7,7 @@ printWords(arrayWordList);
 // const alltLetterBtn = document.querySelector(".btn-all");
 const inputWord = document.querySelector(".input-field");
 const wrapper = document.getElementById("wrapper");
+
 let wordLengthValue = 0;
 
 wordCopyListener();
@@ -92,8 +93,19 @@ function wordCopyListener() {
 	});
 }
 
+
+function wordBlink() {
+	let wordOfList = document.querySelectorAll(".word-of-list");
+
+	wordOfList.forEach((word) => {
+		word.addEventListener("mouseover", () => word.setAttribute("class": "highlight-word");
+		word.addEventListener("mouseout", () => word.removeAttribute("class": "highlight-word"));
+	}); }
+
+
 async function copy(text) {
 	text = await navigator.clipboard.writeText(text);
 }
 
 wordCopyListener();
+wordBlink();
