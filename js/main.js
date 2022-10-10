@@ -3,23 +3,20 @@
 let arrayWordList = geralWordList;
 printWords(arrayWordList);
 
-// const nLetterBtn = document.querySelector(".filter-btn");
-// const alltLetterBtn = document.querySelector(".btn-all");
 const inputWord = document.querySelector(".input-field");
 const wrapper = document.getElementById("wrapper");
+const clearBtn = document.querySelector(".clr-btn");
+
+clearBtn.addEventListener("click", clearInput);
 
 let wordLengthValue = 0;
 
 wordCopyListener();
-// wordOfList.addEventListener("click", () => {
-// 	copy(event.target.value);
-// });
-
 
 inputWord.addEventListener("keyup", () => {
 	wordLengthValue = inputWord.value.length;
-	getWord()
-})
+	getWord();
+});
 
 wrapper.addEventListener("click", () => {
 	const isButton = event.target.nodeName === "BUTTON";
@@ -41,7 +38,6 @@ wrapper.addEventListener("click", () => {
 		getWord();
 	}
 });
-
 
 
 function wordLengthFilter(words, i) {
@@ -98,14 +94,22 @@ function wordBlink() {
 	let wordOfList = document.querySelectorAll(".word-of-list");
 
 	wordOfList.forEach((word) => {
-		word.addEventListener("mouseover", () => word.setAttribute("class": "highlight-word");
-		word.addEventListener("mouseout", () => word.removeAttribute("class": "highlight-word"));
-	}); }
+		word.addEventListener("mouseover", (e) => {
+			e.target.setAttribute("class", "highlighted") ;
+		}); 
+		word.addEventListener("mouseout", (e) => {
+			e.target.removeAttribute("class");
+		}); 
+	});
+}
 
 
-async function copy(text) {
+async function copy(text){
 	text = await navigator.clipboard.writeText(text);
 }
 
+
 wordCopyListener();
 wordBlink();
+
+// e.targer.style.backgroundColor = rgba(50,. 50, 50, 0.5)
