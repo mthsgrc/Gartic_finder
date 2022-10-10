@@ -33,6 +33,7 @@ themeBtnsWrapper.addEventListener("click", () => {
   }
   titleUpdate.innerHTML = `${event.target.innerHTML}`
   printWords(arrayWordList);
+  wordCopyListener();
 });
 
 lengthBtnsWrapper.addEventListener("click", () => {
