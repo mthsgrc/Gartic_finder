@@ -269,7 +269,7 @@ main {
   width: 1000px;
 }
 
-.clr-btn{
+.clr-btn {
   font-family: monospace;
   font-size: x-large;
   font-weight: bold;
@@ -281,14 +281,19 @@ main {
   margin-top: -96px;
 }
 
-.theme-btns button {
+.themeBtnsWrapper {
+  float: right;
+  margin-top: -50px;
+}
+
+.themeBtnsWrapper button {
   font-family: monospace;
   padding: 7px;
   font-weight: bold;
   width: 90px;
 }
 
-.filter-btn{
+.filter-btn {
   font-family: monospace;
   font-size: x-large;
   font-weight: bolder;
@@ -302,6 +307,10 @@ main {
   font-weight: bold;
   text-align: justify;
   line-height: 150%;
+}
+
+.printedWordList span {
+  padding: 5px;
 }
 
 .input-field {
@@ -319,5 +328,5 @@ main {
 }
 
 .highlighted {
-  background-color: rgba(25,25,25,0.5);
+  background-color: rgba(25, 25, 25, 0.5);
 }

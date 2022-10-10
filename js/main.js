@@ -1,11 +1,13 @@
 "use strict";
 
-let arrayWordList = geralWordList;
+let arrayWordList = geralWords;
 printWords(arrayWordList);
 
 const inputWord = document.querySelector(".input-field");
-const wrapper = document.getElementById("wrapper");
+const lengthBtnWrapper = document.getElementById("lengthBtnWrapper");
 const clearBtn = document.querySelector(".clr-btn");
+const themeBtnsWrapper = document.querySelector(".themeBtnsWrapper");
+
 
 clearBtn.addEventListener("click", clearInput);
 
@@ -18,11 +20,25 @@ inputWord.addEventListener("keyup", () => {
 	getWord();
 });
 
-wrapper.addEventListener("click", () => {
+themeBtnsWrapper.addEventListener("click", () => {
 	const isButton = event.target.nodeName === "BUTTON";
-	if (!isButton) {
-		return;
+	if (!isButton) { return; }
+
+	switch(event.target.className) {
+		case "geralWords":
+			arrayWordList = geralWords;
+			break;
+		case "alimentosWords":
+			arrayWordList = alimentosWords;
+			break;
 	}
+
+	printWords(arrayWordList);
+})
+
+lengthBtnWrapper.addEventListener("click", () => {
+	const isButton = event.target.nodeName === "BUTTON";
+	if (!isButton) { return;	}
 
 	if (event.target.value == "all") {
 		printWords(arrayWordList);
@@ -60,6 +76,7 @@ function getWord(word = inputWord.value) {
 
 	printWords(possibleWords);
 	wordCopyListener();
+
 }
 
 function printWords(words) {
@@ -74,6 +91,7 @@ function printWords(words) {
 	}
 	text += "";
 	printedWordListDiv.innerHTML = text;
+	wordBlink();
 }
 
 function clearInput(){
