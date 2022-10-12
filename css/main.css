@@ -269,7 +269,12 @@ main {
   width: 1000px;
 }
 
-.clr-btn{
+.titleDisplay {
+  margin-left: 10px;
+  font-family: sans-serif;
+}
+
+.clr-btn {
   font-family: monospace;
   font-size: x-large;
   font-weight: bold;
@@ -281,14 +286,19 @@ main {
   margin-top: -96px;
 }
 
-.theme-btns button {
+.themeBtnsWrapper {
+  float: right;
+  margin-top: -50px;
+}
+
+.themeBtnsWrapper button {
   font-family: monospace;
   padding: 7px;
   font-weight: bold;
   width: 90px;
 }
 
-.filter-btn{
+.filter-btn {
   font-family: monospace;
   font-size: x-large;
   font-weight: bolder;
@@ -304,6 +314,10 @@ main {
   line-height: 150%;
 }
 
+.printedWordList span {
+  padding: 5px;
+}
+
 .input-field {
   font-family: monospace;
   font-size: x-large;
@@ -311,13 +325,13 @@ main {
   height: 37px;
 }
 
-#wrapper {
+#lengthBtnsWrapper {
   width: 100%;
   margin: 0 auto;
   padding: 15px 10px;
 
 }
 
-.word-of-list {
-  
+.highlighted {
+  background-color: rgba(150, 25, 25, 0.3);
 }

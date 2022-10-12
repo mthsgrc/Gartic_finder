@@ -99,8 +99,8 @@ function wordBlink() {
 
 	wordOfList.forEach((word) => {
 		word.addEventListener("mouseover", () => word.setAttribute("class": "highlight-word");
-		word.addEventListener("mouseout", () => word.removeAttribute("class": "highlight-word"));
-	}); }
+		word.addEventListener("mouseout", () => word.removeAttribute("class": "highlight-word ") key: "value", );
+	}); 
 
 
 async function copy(text) {

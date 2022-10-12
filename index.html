@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="pt-br">
 
 <head>
   <meta charset="utf-8">
@@ -8,31 +8,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="js/words.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <script src="js/master.js" defer></script>
+  <script src="js/words.js" defer></script>
   <script src="js/main.js" defer></script>
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
   <main>
-    <h1>Gartic Finder</h1>
-    <form>
+    <img alt="site logo" src="img/gartic_logo.png" height="82px" width="229px">
+    <h1 class="titleDisplay">GERAL</h1>
+    <!-- <form> -->
       <input class="input-field" type="text" name="incomplete-word" maxlength="25">
-      <button class="clr-btn" type="button" onclick="clearInput()">Clear</button>
-    </form>
-    <div class="theme-btns">
-      <button>GERAL</button><br>
-      <button>ALIMENTOS</button>
-      <button>ANIMAIS</button>
-      <button>ADJETIVOS</button><br>
-      <button>OBJETOS</button>
-      <button>PROFISSÕES</button>
-      <button>VERBOS</button>
-
+      <button class="clr-btn" type="button">Clear</button>
+    <!-- </form> -->
+    <div class="themeBtnsWrapper">
+      <button class="geralWords">GERAL</button><br>
+      <button class="alimentosWords">ALIMENTOS</button>
+      <button class="animaisWords">ANIMAIS</button>
+      <button class="adjetivosWords">ADJETIVOS</button><br>
+      <button class="objetosWords">OBJETOS</button>
+      <button class="profissoesWords">PROFISSÕES</button>
+      <button class="verbosWords">VERBOS</button>
     </div>
     <p>Select Nº of letter:</p>
-    <div id="wrapper">
+    <div id="lengthBtnsWrapper">
       <button class="filter-btn btn-2" value="2">2</button>
       <button class="filter-btn btn-3" value="3">3</button>
       <button class="filter-btn btn-4" value="4">4</button>
