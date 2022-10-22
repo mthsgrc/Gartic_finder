@@ -40,18 +40,14 @@ lengthBtnsWrapper.addEventListener("click", () => {
   if (!isButton) { return; }
 
   if (event.target.value == "all") {
-    printWords(arrayWordList);
-    wordCopyListener();
+    getWord()
     return;
   }
+
   wordLengthValue = parseInt(event.target.value, 10);
   let nLettersWords = wordLengthFilter(arrayWordList, wordLengthValue);
-  if (inputWord.value === "") {
-    printWords(nLettersWords);
-    wordCopyListener();
-  } else {
-    getWord();
-  }
+
+  getWord (inputWord.value, nLettersWords);
 });
 
 function wordLengthFilter(words, i) {
@@ -59,8 +55,7 @@ function wordLengthFilter(words, i) {
   return filteredWords;
 }
 
-function getWord(word = inputWord.value) {
-  let tmpWordsArray = arrayWordList;
+function getWord(word = inputWord.value, tmpWordsArray = arrayWordList) {
   let guessedWord = word.split("");
 
   let possibleWords = [];
@@ -134,5 +129,3 @@ async function copy(text) {
 
 wordCopyListener();
 wordBlink();
-
-// e.targer.style.backgroundColor = rgba(50,. 50, 50, 0.5)
