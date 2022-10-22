@@ -60,16 +60,10 @@ function wordLengthFilter(words, i) {
 }
 
 function getWord(word = inputWord.value) {
-  let tmpWordsArray = wordLengthFilter(arrayWordList, wordLengthValue);
+  let tmpWordsArray = arrayWordList;
   let guessedWord = word.split("");
 
   let possibleWords = [];
-
-  if (arrayWordList.includes(word) && word.length >= 3) {
-    let fullWords = filterFullWords(word);
-    printWords(fullWords);
-  }
-
 
   tmpWordsArray.filter((w) => {
     let tmpRegex = guessedWord.join("").replace(/ /gi, ".");
@@ -100,6 +94,8 @@ function printWords(words) {
   text += "";
   printedWordListDiv.innerHTML = text;
   wordBlink();
+  wordCopyListener();
+
 }
 
 function clearInput() {

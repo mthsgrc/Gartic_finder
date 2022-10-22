@@ -266,7 +266,8 @@ main {
   background-color: rgba(0, 25, 200, 0.3);
   margin: 0 auto;
   padding: 25px 50px 100%;
-  width: 1000px;
+  /*width: 1000px;*/
+  width: 90%;
 }
 
 .titleDisplay {
