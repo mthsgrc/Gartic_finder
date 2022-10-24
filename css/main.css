@@ -235,7 +235,7 @@ main {
   margin: 0 auto;
   padding: 25px 50px 100%;
   max-width: 1000px;
-  min-width: 700px;
+  min-width: 780px;
   width: 90%;
 }
 
@@ -288,7 +288,7 @@ main {
 }
 
 .printedWordList {
-  column-count: 3;
+  column-count: 5;
   column-fill: balance;
   column-rule-style: solid;
   column-rule-color: lightblue;
