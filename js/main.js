@@ -81,9 +81,9 @@ function printWords(words) {
   let text = "";
   for (let i = 0; i < words.length; i++) {
     if (i === 0) {
-      text += `<span class="word-of-list">${words[i]}</span>`;
+      text += `<span class="word-of-list">${words[i]}</span><br>`;
     } else {
-      text += ` - <span class="word-of-list">${words[i]}</span>`;
+      text += ` <span class="word-of-list">${words[i]}\n</span><br>`;
     }
   }
   text += "";

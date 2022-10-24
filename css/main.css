@@ -288,6 +288,10 @@ main {
 }
 
 .printedWordList {
+  column-count: 3;
+  column-fill: balance;
+  column-rule-style: solid;
+  column-rule-color: lightblue;
   font-family: monospace, sans-serif;
   font-size: 1.10rem;
   font-weight: bold;
