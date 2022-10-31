@@ -88,7 +88,6 @@ function printWords(words) {
   }
   text += "";
   printedWordListDiv.innerHTML = text;
-  wordBlink();
   wordCopyListener();
 
 }
@@ -108,24 +107,9 @@ function wordCopyListener() {
 }
 
 
-function wordBlink() {
-  let wordOfList = document.querySelectorAll(".word-of-list");
-
-  wordOfList.forEach((word) => {
-    word.addEventListener("mouseover", (e) => {
-      e.target.setAttribute("class", "highlighted");
-    });
-    word.addEventListener("mouseout", (e) => {
-      e.target.removeAttribute("class");
-    });
-  });
-}
-
-
 async function copy(text) {
   text = await navigator.clipboard.writeText(text);
 }
 
 
 wordCopyListener();
-wordBlink();

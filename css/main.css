@@ -15,6 +15,7 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  min-width: 865px;
 }
 
 /*
@@ -325,6 +326,7 @@ main {
   width: 100%;
 }
 
-.highlighted {
+.word-of-list:hover { 
   background-color: rgba(150, 25, 25, 0.3);
-}
+
+ }
