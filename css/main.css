@@ -230,8 +230,17 @@ https://www.phpied.com/delay-loading-your-print-css/
 
 }
 
+body {
+  /*background-color: rgba(200, 200, 200, 0.7);*/
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.5)
+ ), url("../img/background.png");
+}
+
 main {
-  background-color: rgba(0, 25, 200, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   margin: 0 auto;
   padding: 25px 50px 100%;
   max-width: 1000px;
