@@ -271,11 +271,18 @@ main {
   margin-top: -50px;
 }
 
-.themeBtnsWrapper button {
+.themeBtnsWrapper > button {
+  background-color: rgb(200, 100, 10);
+  border: 2px, double #cccccc;
   font-family: monospace;
   font-weight: bold;
   padding: 7px;
-  width: 90px;
+  width: 90px;  
+
+}
+
+.themeBtnsWrapper button:hover {
+  background-color: rgba(200, 100, 10, 0.1);
 }
 
 .filter-btn {
@@ -292,10 +299,10 @@ main {
   width: 50px;
 }
 
-.themeBtnsWrapper > button {
-  background-color: rgb(200, 100, 10);
-  border: 2px, double #cccccc;
+.filter-btn:hover {
+  background-color: rgba(200, 100, 10, 0.2);
 }
+
 
 .printedWordList {
   column-count: 5;

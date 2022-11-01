@@ -117,6 +117,9 @@ function calcColSizeNeed(n) {
     if (n > 13) {
       return 3;
     }
+    else if (n < 8){
+      return 8;
+    }
     else {
       return 5;
     }
