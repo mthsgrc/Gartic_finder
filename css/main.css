@@ -300,8 +300,8 @@ main {
 .printedWordList {
   column-count: 5;
   column-fill: balance;
-  column-rule-style: solid;
-  column-rule-color: lightblue;
+  column-rule-style: groove;
+  column-rule-color: darkgoldenrod;
   font-family: monospace, sans-serif;
   font-size: 1.10rem;
   font-weight: bold;

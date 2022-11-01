@@ -48,6 +48,7 @@ lengthBtnsWrapper.addEventListener("click", () => {
   let nLettersWords = wordLengthFilter(arrayWordList, wordLengthValue);
 
   getWord (inputWord.value, nLettersWords);
+  changeColumn(calcColSizeNeed(wordLengthValue))
 });
 
 function wordLengthFilter(words, i) {
@@ -106,10 +107,26 @@ function wordCopyListener() {
   });
 }
 
+function changeColumn (n_col) {
+  const divCol = document.querySelector(".printedWordList");
+
+  divCol.style.columnCount = `${n_col}`;
+}
+
+function calcColSizeNeed(n) {
+    if (n > 14) {
+      return 3;
+    }
+    else {
+      return 5;
+    }
+}
 
 async function copy(text) {
   text = await navigator.clipboard.writeText(text);
 }
+
+
 
 
 wordCopyListener();
