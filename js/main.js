@@ -114,7 +114,7 @@ function changeColumn (n_col) {
 }
 
 function calcColSizeNeed(n) {
-    if (n > 14) {
+    if (n > 13) {
       return 3;
     }
     else {
