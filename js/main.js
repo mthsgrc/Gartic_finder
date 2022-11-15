@@ -62,7 +62,7 @@ function getWord(word = inputWord.value, tmpWordsArray = arrayWordList) {
 
   tmpWordsArray.filter((w) => {
     let tmpRegex = guessedWord.join("").replace(/ /gi, ".");
-    let regexStr = new RegExp(`^${tmpRegex}`, 'g');
+    let regexStr = new RegExp(`${tmpRegex}`, 'g');
 
     if (w.match(regexStr) !== null) possibleWords.push(w);
   });
